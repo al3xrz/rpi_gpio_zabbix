@@ -1,0 +1,15 @@
+[Unit]
+  Description = "Send GPIO  statuses"
+  After = multi-user.target
+
+[Service]
+  Type = idle
+  ExecStart = /usr/bin/node /home/pi/gpio/get.js
+
+[Install]
+  WantedBy = multi-user.target
+
+
+
+
+
